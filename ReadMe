@@ -10,11 +10,22 @@ git branch -M main
 git remote add origin https://github.com/DIEZlaura/DevOps1.git
 
 git push -u origin master
+# test: modifiquem algun arxiu i fem un commit per guardar i push per que tambe estigui al github (pag web)
+git commit -am "Commit2"
+git push 
 
+#Ara intentarem fer el mateix en shh
+#1) crear la clau
+ssh-keygen -t rsa
+#la copiem
+clip < ~/.ssh/id_rsa.pub #aixi queda al "cortapapeles" 
+#anem al github i copiem la nostra clau
+#despres fem
+ssh -T git@github.com
 -- Aller sur localhost:8080 et creer le pipeline
 
 -- si pb git
-sudo apt-get purge git
+sudo apt-get purge gitls -al 
 sudo apt-get autoremove
 sudo apt-get install git
 
